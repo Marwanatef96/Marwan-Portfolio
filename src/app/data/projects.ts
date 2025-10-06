@@ -5,7 +5,7 @@ export const projects = [
         title: "SadManga",
         description:
             "A manga reading website powered by the MangaDex API. Includes search, chapter reading, and responsive design for mobile and desktop.",
-        image: "/images/sadmanga.png",
+        image: "/images/SadManga.png",
         tech: ["React", "API Integration"],
         github: "https://github.com/Marwanatef96/SadManga",
         demo: "https://sadmanga.vercel.app/",
