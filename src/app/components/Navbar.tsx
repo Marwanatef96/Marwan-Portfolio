@@ -18,7 +18,7 @@ import {
     ListItemText,
 } from "@mui/material";
 
-const navLinks = ["Home", "About", "Projects", "Skills", "Contact"];
+const navLinks = ["Home", "About", "Skills","Projects",  "Contact"];
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
