@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
 
 // Titles moved to module scope so they are stable and don't need to be added to effect deps
 const TITLES = [
@@ -24,6 +25,7 @@ const TITLES = [
 ];
 
 export default function Hero() {
+    const theme = useTheme();
     // Typing animation
 
     const [index, setIndex] = useState(0);
@@ -63,7 +65,7 @@ export default function Hero() {
                 alignItems: "center",
                 justifyContent: "center",
                 overflow: "hidden",
-                bgcolor: "#1a1a1a",
+                bgcolor: theme.palette.background.paper,
                 fontFamily: "'Poppins', sans-serif",
             }}>
             {/* Background image and overlay */}
@@ -84,8 +86,7 @@ export default function Hero() {
                     position: "absolute",
                     inset: 0,
                     zIndex: 1,
-                    background:
-                        "linear-gradient(to bottom right, #1a1a1a, rgba(26,26,26,0.95))",
+                    background: `linear-gradient(to bottom right, ${theme.palette.background.paper}, ${theme.palette.background.paper}f2)`,
                 }}
             />
 
@@ -118,9 +119,9 @@ export default function Hero() {
                                     position: "absolute",
                                     inset: 0,
                                     borderRadius: "50%",
-                                    backgroundColor: "#2c2c2c",
-                                    boxShadow:
-                                        "0 0 25px -5px rgba(244, 192, 37, 0.3), 0 0 15px -5px rgba(244, 192, 37, 0.2)",
+                                    backgroundColor:
+                                        theme.palette.background.paper,
+                                    boxShadow: `0 0 25px -5px ${theme.palette.primary.main}4d, 0 0 15px -5px ${theme.palette.primary.main}33`,
                                 }}
                             />
                             <Avatar
@@ -131,8 +132,9 @@ export default function Hero() {
                                     inset: 16,
                                     width: "calc(100% - 32px)",
                                     height: "calc(100% - 32px)",
-                                    bgcolor: "#444",
-                                    color: "#aaa",
+                                    bgcolor:
+                                        theme.palette.action.disabledBackground,
+                                    color: theme.palette.action.disabled,
                                     fontSize: "1rem",
                                     fontWeight: 500,
                                 }}
@@ -151,17 +153,17 @@ export default function Hero() {
                                 p: { xs: 4, md: 6 },
                                 textAlign: { xs: "center", md: "left" },
                                 borderRadius: "1rem",
-                                backgroundColor: "rgba(44,44,44,0.5)",
-                                border: "1px solid rgba(255,255,255,0.1)",
+                                backgroundColor:
+                                    theme.palette.background.paper + "80",
+                                border: `1px solid ${theme.palette.primary.main}20`,
                                 backdropFilter: "blur(20px)",
-                                boxShadow:
-                                    "0 0 40px rgba(0,0,0,0.6), inset 0 0 2px rgba(255,255,255,0.05)",
+                                boxShadow: `0 0 40px ${theme.palette.background.default}99, inset 0 0 2px ${theme.palette.text.primary}0d`,
                             }}>
                             <Typography
                                 variant='h3'
                                 sx={{
                                     fontWeight: 900,
-                                    color: "#fff",
+                                    color: theme.palette.text.primary,
                                     mb: 2,
                                     lineHeight: 1.15,
                                     fontSize: {
@@ -175,7 +177,7 @@ export default function Hero() {
                                 <Box
                                     component='span'
                                     sx={{
-                                        color: "#f4c025",
+                                        color: theme.palette.primary.main,
                                     }}>
                                     Marwan Atef
                                 </Box>{" "}
@@ -185,10 +187,10 @@ export default function Hero() {
                                     component={motion.span}
                                     key={displayed}
                                     sx={{
-                                        color: "#f4c025",
+                                        color: theme.palette.primary.main,
                                         display: "inline-block",
                                         fontFamily: "monospace",
-                                        borderRight: "3px solid #f4c025",
+                                        borderRight: `3px solid ${theme.palette.primary.main}`,
                                         pr: "6px",
                                         whiteSpace: "nowrap",
                                         // Responsive font sizes to scale with heading
@@ -210,7 +212,7 @@ export default function Hero() {
                             <Typography
                                 variant='h6'
                                 sx={{
-                                    color: "#ccc",
+                                    color: theme.palette.text.secondary,
                                     mb: 4,
                                     maxWidth: 500,
                                     mx: { xs: "auto", md: 0 },
@@ -244,11 +246,13 @@ export default function Hero() {
                                         sx={{
                                             px: 5,
                                             fontWeight: 700,
-                                            backgroundColor: "#f4c025",
-                                            color: "#1a1a1a",
+                                            backgroundColor:
+                                                theme.palette.primary.main,
+                                            color: theme.palette.background
+                                                .default,
                                             "&:hover": {
                                                 backgroundColor:
-                                                    "rgba(244,192,37,0.9)",
+                                                    theme.palette.primary.light,
                                             },
                                         }}>
                                         Check My CV
@@ -264,11 +268,13 @@ export default function Hero() {
                                         sx={{
                                             px: 5,
                                             fontWeight: 700,
-                                            borderColor: "#f4c025",
-                                            color: "#f4c025",
+                                            borderColor:
+                                                theme.palette.primary.main,
+                                            color: theme.palette.primary.main,
                                             "&:hover": {
                                                 backgroundColor:
-                                                    "rgba(244,192,37,0.1)",
+                                                    theme.palette.primary.main +
+                                                    "1A",
                                             },
                                         }}>
                                         View Projects

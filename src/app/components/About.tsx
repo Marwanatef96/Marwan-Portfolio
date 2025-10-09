@@ -112,8 +112,7 @@ export default function About() {
                                                         .paper,
                                                 border: `1px solid ${theme.palette.primary.main}25`,
                                                 height: "100%",
-                                                boxShadow:
-                                                    "0 0 15px rgba(0,0,0,0.3)",
+                                                boxShadow: `0 0 15px ${theme.palette.background.default}4d`,
                                             }}>
                                             <Box sx={{ mb: 2 }}>{f.icon}</Box>
                                             <Typography

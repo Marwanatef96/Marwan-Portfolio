@@ -33,8 +33,8 @@ const skipLinkStyles = `
 	height: auto;
 	left: auto;
 	padding: 0.5rem 1rem;
-	background: #111;
-	color: #f4c025;
+	background: var(--mui-palette-background-paper);
+	color: var(--mui-palette-primary-main);
 	border-radius: 6px;
 	z-index: 9999;
 }

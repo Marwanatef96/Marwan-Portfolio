@@ -70,9 +70,7 @@ export default function Projects() {
                                 <Card
                                     sx={{
                                         background:
-                                            theme.palette.mode === "dark"
-                                                ? "rgba(34, 30, 16, 0.5)"
-                                                : "rgba(255,255,255,0.6)",
+                                            theme.palette.background.paper,
                                         backdropFilter: "blur(10px)",
                                         border: `1px solid ${theme.palette.primary.main}33`,
                                         borderRadius: "1rem",
@@ -159,7 +157,9 @@ export default function Projects() {
                                                         backgroundColor:
                                                             theme.palette
                                                                 .primary.main,
-                                                        color: "#000",
+                                                        color: theme.palette
+                                                            .primary
+                                                            .contrastText,
                                                         fontWeight: 600,
                                                         "&:hover": {
                                                             backgroundColor: `${theme.palette.primary.main}cc`,

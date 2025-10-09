@@ -273,14 +273,13 @@ export default function Contact() {
                                 }
                                 sx={{
                                     backgroundColor: theme.palette.primary.main,
-                                    color: "#000",
+                                    color: theme.palette.primary.contrastText,
                                     fontWeight: 600,
                                     py: 1.4,
-                                    boxShadow: "0 0 15px rgba(244,192,37,0.4)",
+                                    boxShadow: `0 0 15px ${theme.palette.primary.main}66`,
                                     "&:hover": {
                                         backgroundColor: `${theme.palette.primary.main}cc`,
-                                        boxShadow:
-                                            "0 0 25px rgba(244,192,37,0.5)",
+                                        boxShadow: `0 0 25px ${theme.palette.primary.main}80`,
                                     },
                                     "&:disabled": {
                                         opacity: 0.7,

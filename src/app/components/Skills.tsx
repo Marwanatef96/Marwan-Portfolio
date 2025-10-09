@@ -91,7 +91,8 @@ export default function Skills() {
                                         alignItems: "center",
                                         gap: 2,
                                         borderRadius: "1rem",
-                                        background: "rgba(34, 30, 16, 0.5)",
+                                        background:
+                                            theme.palette.background.paper,
                                         backdropFilter: "blur(10px)",
                                         border: `1px solid ${theme.palette.primary.main}33`,
                                         boxShadow: `0 4px 15px ${theme.palette.primary.main}15`,
