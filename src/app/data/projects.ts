@@ -2,6 +2,15 @@
 
 export const projects = [
     {
+        title: "ExportSales",
+        description:
+            "A business platform sourcing premium frozen fruits & vegetables from Egypt for international importers — featuring direct-factory pricing, verified suppliers, and transparent export processes.",
+        image: "/images/ExportSales.png",
+        tech: ["Next.js", "Tailwind CSS", "Responsive UI"],
+        github: "https://github.com/Marwanatef96/ExportSales", 
+        demo: "https://exportssales.com/",
+    },
+    {
         title: "SadManga",
         description:
             "A manga reading website powered by the MangaDex API. Includes search, chapter reading, and responsive design for mobile and desktop.",
